@@ -1,0 +1,57 @@
+*{
+margin: 0;
+padding: 0;
+}
+body{
+	counter-reset: list;
+}
+.item{
+	background-color: #F2BFBF;
+	font-size: 20px;
+	font-weight: 700;
+	border: 1px solid white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	}
+.item:nth-child(even){
+background-color: lightblue;
+}
+.item::before{
+content: counter(list);
+counter-increment: list;
+}
+.box {
+display: grid;
+grid-template-columns: repeat(5, 1fr); 
+grid-template-rows: repeat(6, 1fr);
+height: 600px;
+grid-gap: 15px;
+min-width: 1170px;
+margin: 0 auto;
+}
+.item:nth-child(1){
+	grid-column: span 2; 
+	grid-row: span 2;
+}
+.item:nth-child(2){
+	grid-column: span 3;
+	grid-row: span 3;
+}
+.item:nth-child(3){
+	grid-column: span 2;
+	grid-row: span 2;
+}
+.item:nth-child(5){
+	grid-column: span 2;
+	grid-row: span 3;	
+}
+.item:nth-child(6){
+	grid-column: span 3;
+	grid-row: span 2;
+}
+
+.item:nth-child(4){
+	
+}
